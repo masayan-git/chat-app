@@ -11,39 +11,10 @@
   </div>
 </div>
 <div class="chat-main">
-  <div class="chat-slide">
-    <div class="chat-users">
-      <div class="chat-user-name">
-        <p>Tom</p>
-      </div>
-      <div class="chat-user-at">
-        <p>2020/04/04(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="chat-text">
-      <div class="chat-messege">
-        <p>おはよう</p>
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'messages', collection: @messages%>
 
-  <div class="chat-slide">
-    <div class="chat-users">
-      <div class="chat-user-name">
-        <p>Tom</p>
-      </div>
-      <div class="chat-user-at">
-        <p>2020/04/04(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="chat-text">
-      <div class="chat-messege">
-        <p>おはよう</p>
-      </div>
-    </div>
-  </div>
+  
 </div>
-
 <!--div class="chat-fot"-->
 <%= form_with model: [@room, @message], html: {class: "chat-fot"}, local: true do |f| %>
   <div class="form">
