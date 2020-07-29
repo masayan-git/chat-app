@@ -11,9 +11,7 @@
   </div>
 </div>
 <div class="chat-main">
-  <%= render partial: 'messages', collection: @messages%>
-
-  
+  <%= render partial: 'message', collection: @messages%>
 </div>
 <!--div class="chat-fot"-->
 <%= form_with model: [@room, @message], html: {class: "chat-fot"}, local: true do |f| %>
