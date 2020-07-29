@@ -13,6 +13,7 @@ RSpec.describe "メッセージ投稿機能", type: :system do
 
       # 作成されたチャットルームへ遷移する
       click_on(@room_user.room.name)
+
       # DBに保存されていないことを期待する
       expect{
         find('input[name="commit"]').click
